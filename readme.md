@@ -1,0 +1,1 @@
+This repo is used for college assignment, using HTML, CSS, JS, and Bootstrap.
