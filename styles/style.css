@@ -6,3 +6,17 @@
     background-color: hsl(216, 98%, 52%);
     padding: 5px;
 }
+
+@media (max-width: 768px) {
+    iframe {
+        max-width: 500px;
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    iframe {
+        max-width: 300px;
+        max-height: 200px;
+    }
+}
