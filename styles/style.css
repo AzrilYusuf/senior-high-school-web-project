@@ -1,0 +1,8 @@
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50% !important;
+    background-color: hsl(216, 98%, 52%);
+    padding: 5px;
+}
