@@ -29,7 +29,9 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border sticky-top">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light border sticky-top"
+    >
       <div class="container">
         <a class="navbar-brand" href="#"
           ><img
@@ -190,7 +192,7 @@
       <div class="row py-3">
         <div class="col-lg-7 mb-4">
           <h1>SMA 1 Kota Atlantis</h1>
-          <h4>Menjadi Sekolah yang mengembangkan bakat siswa</h4>
+          <h4>Menjadi Sekolah yang nyaman untuk siswa</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -200,7 +202,14 @@
             pariatur
           </p>
           <p>
-            <button type="button" class="btn btn-dark">Info PPDB</button>
+            <button type="button" class="btn btn-dark">
+              <a
+                href="./register.html"
+                class="text-white"
+                style="text-decoration: none"
+                >Info PPDB</a
+              >
+            </button>
           </p>
         </div>
         <div class="col-lg-5 mb-4">
@@ -213,15 +222,40 @@
       </div>
     </div>
 
-    <div class="container py-5">
-      <div class="row py-3">
-        <div class="col-lg-5 mb-4">
+    <!-- Visi & Misi -->
+    <section class="container py-5">
+      <div class="row py3">
+        <div class="col-lg-5">
           <img
-            src="https://www.umn.ac.id/wp-content/uploads/2022/06/akreditasi-800x383.jpg"
             class="d-block w-100 rounded"
-            alt="..."
+            src="https://bprsulman.co.id/assets/upload/image/visi-misi.png"
           />
         </div>
+        <div class="col-lg-7 mb-4">
+          <h2>Visi</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur
+          </p>
+          <h2>Misi</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container py-5">
+      <div class="row py-3">
         <div class="col-lg-7 mb-4">
           <h3>Akreditasi A</h3>
           <h4>Sesuai ketentuan Kemendikbudristek (2019)</h4>
@@ -234,11 +268,25 @@
             pariatur
           </p>
         </div>
+        <div class="col-lg-5 mb-4">
+          <img
+            src="https://www.umn.ac.id/wp-content/uploads/2022/06/akreditasi-800x383.jpg"
+            class="d-block w-100 rounded"
+            alt="..."
+          />
+        </div>
       </div>
     </div>
 
     <div class="container py-5">
       <div class="row py-3">
+        <div class="col-lg-5 mb-4">
+          <img
+            src="https://rockingham-shs.flywheelsites.com/wp-content/uploads/2016/03/IMGP4309-1024x681.jpg"
+            class="d-block w-100 rounded"
+            alt="..."
+          />
+        </div>
         <div class="col-lg-7 mb-4">
           <h3>Ekstrakurikuler</h3>
           <h4>Mengembangkan bakat siswa</h4>
@@ -253,20 +301,13 @@
           <p>
             <button type="button" class="btn btn-dark">
               <a
+                href="./extracurricular.html"
                 class="text-white"
                 style="text-decoration: none"
-                href="./extracurricular.html"
                 >Info Ekstrakurikuler</a
               >
             </button>
           </p>
-        </div>
-        <div class="col-lg-5 mb-4">
-          <img
-            src="https://rockingham-shs.flywheelsites.com/wp-content/uploads/2016/03/IMGP4309-1024x681.jpg"
-            class="d-block w-100 rounded"
-            alt="..."
-          />
         </div>
       </div>
     </div>
@@ -409,9 +450,7 @@
                 <a href="#" class="text-white text-decoration-none">PPDB</a>
               </li>
               <li class="pb-1">
-                <a
-                  href="./profile.html"
-                  class="text-white text-decoration-none"
+                <a href="./profile.html" class="text-white text-decoration-none"
                   >Tentang Kami</a
                 >
               </li>
