@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="https://naevaweb.com/userfiles/uploads/naevaschool-2.svg" />
     <title>Profil Sekolah | SMA 1 Atlantis</title>
 
     <!-- Custom CSS -->
@@ -95,7 +96,7 @@
                 >Blog</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Kegiatan Sekolah</a></li>
+                <li><a class="dropdown-item" href="./school-activities.html">Kegiatan Sekolah</a></li>
               </ul>
             </li>
           </ul>
@@ -181,6 +182,76 @@
         class="carousel-control-next"
         type="button"
         data-bs-target="#carouselDekstop"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Mobile Carousel -->
+    <div
+      id="carouselMobile"
+      class="carousel slide d-lg-none"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselMobile"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselMobile"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselMobile"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://naevaschool.naevaweb.my.id/userfiles/uploads/img-edukasi-64.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://naevaschool.naevaweb.my.id/userfiles/uploads/img-edukasi-5-4.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://naevaschool.naevaweb.my.id/userfiles/uploads/img-edukasi-57.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselMobile"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselMobile"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -447,7 +518,7 @@
             <div class="h5">Halaman</div>
             <ul class="list-unstyled">
               <li class="pb-1">
-                <a href="#" class="text-white text-decoration-none">PPDB</a>
+                <a href="./register.html" class="text-white text-decoration-none">PPDB</a>
               </li>
               <li class="pb-1">
                 <a href="./profile.html" class="text-white text-decoration-none"
@@ -465,7 +536,7 @@
             <div class="h5">Update</div>
             <ul class="list-unstyled">
               <li class="pb-1">
-                <a href="#" class="text-white text-decoration-none"
+                <a href="./school-activities.html" class="text-white text-decoration-none"
                   >Kegiatan Sekolah</a
                 >
               </li>
@@ -506,10 +577,25 @@
       </button>
     </div>
 
+    <!-- Bootstrap JS import -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JS -->
+    <script>
+      window.addEventListener("resize", function () {
+        const backToTopButton = document.querySelector(".btn-back-to-top a");
+        if (window.innerWidth >= 769) {
+          backToTopButton.setAttribute("href", "#carouselDekstop");
+        } else {
+          backToTopButton.setAttribute("href", "#carouselMobile");
+        }
+      });
+
+      // Initial check to set the href based on current screen size
+      window.dispatchEvent(new Event("resize"));
+    </script>
   </body>
 </html>

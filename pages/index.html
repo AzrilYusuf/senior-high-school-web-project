@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="https://naevaweb.com/userfiles/uploads/naevaschool-2.svg" />
     <title>Home | SMA 1 Atlantis</title>
 
     <!-- Custom CSS -->
@@ -95,7 +96,7 @@
                 >Blog</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Kegiatan Sekolah</a></li>
+                <li><a class="dropdown-item" href="./school-activities.html">Kegiatan Sekolah</a></li>
               </ul>
             </li>
           </ul>
@@ -187,7 +188,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
+    <!-- Mobile Carousel -->
     <div
       id="carouselMobile"
       class="carousel slide d-lg-none"
@@ -258,7 +259,7 @@
       </button>
     </div>
 
-    <div class="container py-5">
+    <section class="container py-5">
       <div class="row py-3">
         <div class="col-lg-7 mb-4">
           <h1>SMA 1 Kota Atlantis</h1>
@@ -286,9 +287,9 @@
           />
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container pb-5">
+    <section class="container pb-5">
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-3 mb-lg-4">
           <div class="bg-light text-dark border text-center p-3 p-xl-4 rounded">
@@ -331,8 +332,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Gallery & School Activities -->
     <div class="container pb-5">
       <div class="row pb-3 align-items-top">
         <div class="col-xxl-5 col-lg-6 mb-3 mb-lg-4">
@@ -512,7 +514,7 @@
     </div>
 
     <!-- Promotion Video -->
-    <div class="py-5">
+    <section class="py-5">
       <div class="container text-center">
         <iframe
           width="600"
@@ -525,10 +527,10 @@
           allowfullscreen
         ></iframe>
       </div>
-    </div>
+    </section>
 
     <!-- Review -->
-    <div class="container py-3">
+    <section class="container py-3">
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-3 mb-lg-4">
           <div class="bg-light text-dark border text-center p-3 p-xl-4 rounded">
@@ -576,10 +578,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Call to Action -->
-    <div class="py-2">
+    <section class="py-2">
       <div class="container text-center bg-success text-white py-5 rounded-3">
         <div class="fs-2 mb-3">Segera Daftar!</div>
         <p>
@@ -600,7 +602,7 @@
           </button>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Contact & Map -->
     <div class="py-5">
@@ -649,7 +651,7 @@
     </div>
 
     <!-- Online Chat -->
-    <div class="container mb-4">
+    <section class="container mb-4">
       <div class="card">
         <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
           <span>Chat with Us</span>
@@ -666,7 +668,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
@@ -685,7 +687,7 @@
             <div class="h5">Halaman</div>
             <ul class="list-unstyled">
               <li class="pb-1">
-                <a href="#" class="text-white text-decoration-none">PPDB</a>
+                <a href="./register.html" class="text-white text-decoration-none">PPDB</a>
               </li>
               <li class="pb-1">
                 <a href="./profile.html" class="text-white text-decoration-none"
@@ -703,7 +705,7 @@
             <div class="h5">Update</div>
             <ul class="list-unstyled">
               <li class="pb-1">
-                <a href="#" class="text-white text-decoration-none"
+                <a href="./school-activities.html" class="text-white text-decoration-none"
                   >Kegiatan Sekolah</a
                 >
               </li>
@@ -762,16 +764,32 @@
       </div>
     </div>
 
+    <!-- Bootstrap JS import -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JS -->
     <script>
+      // Toggle chat
       function toggleChat() {
         const chatContent = document.getElementById('chatContent');
         chatContent.style.display = chatContent.style.display === 'none' ? 'block' : 'none';
       }
+      
+      // Function for btn-back-to-top
+      window.addEventListener("resize", function () {
+        const backToTopButton = document.querySelector(".btn-back-to-top a");
+        if (window.innerWidth >= 769) {
+          backToTopButton.setAttribute("href", "#carouselDekstop");
+        } else {
+          backToTopButton.setAttribute("href", "#carouselMobile");
+        }
+      });
+
+      // Initial check to set the href based on current screen size
+      window.dispatchEvent(new Event("resize"));
     </script>
   </body>
 </html>
